@@ -7,23 +7,65 @@
 body {
     font-family: Helvetica, Tahoma, Verdana, sans-serif;
     background-color: lightgrey;
+    display: flex;
     margin: 0px;
+    justify-content: space-between;
   }
+
+  /* mobile devices */
+  @media (min-width: 320px) {
+    body {
+        background-color: lightpink;
+    }
+  }
+
+  /* tablet display */
+  @media (min-width: 768px) {
+    body {
+        background-color: lightgoldenrodyellow;
+    }
+  }
+
+  /* laptop display */
+  @media (min-width: 1024px) {
+    body {
+        background-color: lightblue;
+    }
+  }
+
+  /* desktop display */
+  @media (min-width: 1200px) {
+    body {
+        background-color: lightgrey;
+    }
+  }
+
+h1 {
+    text-align: center;
+    margin: 25px;
+}
 
 /* Removes formatting from links */
 a {
     text-decoration: none;
   }
 
+  /* hover options */
+  /* a:hover {
+    color: black;
+    background: yellow;
+  }
+  
+  @media (hover: hover) {
+    a:hover {
+      color: white;
+      background: black;
+    }
+  } */
+
   /* Removes bullet points, but keeps other list properties.*/
 ul {
     list-style: none;
-}
-
-img {
-    border-radius: 10%;
-    height: 150px;
-    width: 100px;
 }
 
 /* style the header */
@@ -34,6 +76,7 @@ img {
 /*Keeps hamburger at the top as you scroll down.*/
     position: sticky;
     background-color: lightgreen;
+    
   }
   
   /* Style all social media icons */
@@ -115,23 +158,63 @@ nav a {
 #hamburger-btn:checked + nav {
     right: 0;
   }
-  
 
-article {
+main {
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about {
+    margin: 50px;
+    width: 300px;
+    text-align: left;
+}
+
+.founder {
+   width: 225px;
+   height: 300px;
+   margin: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 15px 20px;
+   border-radius: 15px;
+   background-color: lightblue;
+}
+
+img {
+    margin: 15px;
+    border-radius: 15px;
+    height: 275px;
+    width: 175px;
+}
+
+.blog {
+    width: 300px;
+    height: 300px;
     padding: 5px;
-    margin: 5px;    
-    text-align: center;
-    font: roboto;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.article {
+    
+    height: 50px;
+    margin: 15px;    
 }  
 
-footer {
-    height: 2000px;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    font: roboto;
-    background-color: darkgray;
+/* p:hover {
+    display: none;
 }
+
+@media (hover: hover) {
+    p:hover {
+        display: block;
+    }
+} */
 
 #tabs {
     display: none;
@@ -150,6 +233,59 @@ footer {
     text-align: center;
     font: roboto;
 }
+
+#like-button {
+    background-color: lightblue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#like-button:active {
+    background-color: lightgreen;
+    color: black;
+}
+
+#sign-up {
+    Font-size: 26px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#request {
+    margin: 5px;
+    color: white;
+    background-color: lightsalmon;
+}
+
+#input {
+    margin: 5px;
+}
+
+footer {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    font: roboto;
+    background-color: darkgray;
+    justify-content: space-evenly;
+}
+
+#footer-menu {
+    margin: 50px;
+}
+
+#contact-us {
+    margin: 50px;
+}
+
+#footer-social {
+    margin: 50px;
+}
+
+
 
 /* Media query that allows for mobile design. 
 Everything below 550px will have different design specs.*/
