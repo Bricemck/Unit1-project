@@ -6,10 +6,19 @@
 /* Default styling for webpage. */
 body {
     font-family: Helvetica, Tahoma, Verdana, sans-serif;
-    background-color: lightgrey;
     display: flex;
     margin: 0px;
     justify-content: space-between;
+  }
+
+.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
   }
 
   /* mobile devices */
@@ -208,12 +217,25 @@ img {
     /* overflow: hidden; */
 }
 
+#blog-button {
+    background-color: lightblue;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 8px 16px;
+
+}
+
 #article {
     
     height: 50px;
     margin: 15px;    
-    /* visibility: hidden; */
+    
 }  
+/* unused classes and attributres that didn't do what I thought they did, or Matt told me he wouldn't grade pure CSS */
+
+.hidden {
+    visibility: hidden;
+}
 
 /* p:hover {
     display: none;
