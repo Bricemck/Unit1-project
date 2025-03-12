@@ -1,5 +1,14 @@
 const requestElement = document.getElementById('request');
 const inputElement = document.getElementById('input')
+const likeButtonElement = document.getElementById('like-button')
+const displayArticle = document.getElementById('article');
+let likesCount = 0;
+const handleLike = () => {
+    likesCount = likesCount +1;
+    likeButtonElement.textContent =`${likesCount} likes. like this post!`;
+}
+
+
 
 console.dir(requestElement)
 console.dir(inputElement)
@@ -9,7 +18,7 @@ requestElement.addEventListener('click', () => {
     alert("Your request has been recieved, please allow 2 business days for response!")});
 
 
-const displayArticle = document.getElementById('article');
+
 
 console.dir(displayArticle)
 
@@ -17,9 +26,14 @@ displayArticle.addEventListener('click', () => {
     if (displayArticle.hasAttribute('hidden') === true) {
         displayArticle.removeAttribute('hidden')
     }
-}
+});
 
+likeButtonElement.addEventListener('click', () => {
+    console.log('you clicked me')
+}
 )
+
+likeButtonElement.addEventListener('click', handleLike);
 
 // const buttonElement = document.querySelector('button');
 

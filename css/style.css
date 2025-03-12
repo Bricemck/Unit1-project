@@ -50,18 +50,26 @@ a {
     text-decoration: none;
   }
 
-  /* hover options */
-  /* a:hover {
+#dark-mode {
+    background-color: lightblue;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
+  hover options */
+
+  a:hover {
     color: black;
     background: yellow;
   }
   
-  @media (hover: hover) {
+@media (hover: hover) {
     a:hover {
       color: white;
       background: black;
     }
-  } */
+  }
 
   /* Removes bullet points, but keeps other list properties.*/
 ul {
@@ -197,13 +205,14 @@ img {
     margin: 5px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-.article {
+#article {
     
     height: 50px;
     margin: 15px;    
+    /* visibility: hidden; */
 }  
 
 /* p:hover {
