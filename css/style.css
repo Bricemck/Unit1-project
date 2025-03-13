@@ -85,6 +85,35 @@ ul {
     list-style: none;
 }
 
+.pretty-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    max-width: 300px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .pretty-list li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    transition: background 0.2s;
+  }
+  
+  .pretty-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .pretty-list li:hover {
+    background: #e0e0e0;
+    cursor: pointer;
+  }
+  
+
 /* style the header */
 .header {
     top: 0;
@@ -242,16 +271,6 @@ img {
     visibility: hidden;
 }
 
-/* p:hover {
-    display: none;
-}
-
-@media (hover: hover) {
-    p:hover {
-        display: block;
-    }
-} */
-
 #tabs {
     display: none;
 }
@@ -291,12 +310,14 @@ img {
 
 #request {
     margin: 5px;
+    width: 100px;
     color: white;
     background-color: lightsalmon;
 }
 
 #input {
     margin: 5px;
+    width: 300px;
 }
 
 footer {
@@ -321,7 +342,7 @@ footer {
     margin: 50px;
 }
 
-
+/*unused code prototypes
 
 /* Media query that allows for mobile design. 
 Everything below 550px will have different design specs.*/
@@ -330,6 +351,15 @@ Everything below 550px will have different design specs.*/
     #tabs {
         display: flex;
         gap: 16px;
+    }
+} */
+ /* p:hover {
+    display: none;
+}
+
+@media (hover: hover) {
+    p:hover {
+        display: block;
     }
 } */
 
