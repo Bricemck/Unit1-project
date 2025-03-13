@@ -200,6 +200,10 @@ main {
    background-color: lightblue;
 }
 
+.innerText p {
+    display: none;
+}
+
 img {
     margin: 15px;
     border-radius: 15px;
@@ -229,6 +233,7 @@ img {
     
     height: 50px;
     margin: 15px;    
+    display: block;
     
 }  
 /* unused classes and attributres that didn't do what I thought they did, or Matt told me he wouldn't grade pure CSS */

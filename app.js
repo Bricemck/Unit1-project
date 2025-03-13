@@ -3,15 +3,39 @@ const inputElement = document.getElementById('input')
 const likeButtonElement = document.getElementById('like-button')
 const displayArticle = document.getElementById('article');
 const blogToggle = document.getElementById('blog-button')
+const imgCaption = document.querySelector('#founder img')
+const innerText = document.querySelector('.innerText p')
 
+let isImgDisplay = false
 
+console.log(imgCaption)
+
+imgCaption.addEventListener('mouseover', () => {
+
+    if (isImgDisplay === false) {
+        innerText.style.display = 'block';
+        isImgDisplay = true
+        return
+    }
+    if (isImgDisplay === true) {
+        innerText.style.display = "none"
+        isImgDisplay = false
+    }
+});
+
+let isDisplay = true
 
 blogToggle.addEventListener('click', () => {
 
-    if (displayArticle.hasAttribute('hidden') === false) {
-    displayArticle.classList.add('hidden')
-}  
-else (displayArticle.removeAttribute('hidden'))
+    if (isDisplay === true) {
+        displayArticle.style.display = 'none'
+        isDisplay = false
+        return
+    }
+    if (isDisplay === false) {
+        displayArticle.style.display = 'block'
+        isDisplay = true
+    }
 });
 
 
@@ -20,10 +44,18 @@ const handleLike = () => {
     likesCount = likesCount +1;
     likeButtonElement.textContent =`${likesCount} likes. like this post!`;
 }
+likeButtonElement.addEventListener('click', handleLike);
+
+
 
 requestElement.addEventListener('click', () => {
     
-    alert("Your request has been recieved, please allow 2 business days for response!")});
+    let customerInput = inputElement.value ;
+    console.log(customerInput);
+    alert(`We have received your input ${customerInput}. Look for our response within two business days`)});
+
+
+
 
 const toggleButton = document.getElementById('dark-mode');
 const body = document.body;
@@ -38,17 +70,24 @@ toggleButton.addEventListener('click', () => {
     toggleButton.textContent = 'Switch to Dark Mode';
 }
 });
-
-
 body.classList.add('light-mode')
 
 
-likeButtonElement.addEventListener('click', () => {
-    console.log('you clicked me')
-}
-)
-likeButtonElement.addEventListener('click', handleLike);
 
+
+//     if (displayArticle.hasAttribute('hidden') === false) {
+//     displayArticle.classList.add('hidden')
+
+// }  
+//     else if (displayArticle.hasAttribute('hidden') === true) {
+//         displayArticle.classList.remove('hidden')
+//     }
+
+// likeButtonElement.addEventListener('click', () => {
+//     console.log('you clicked me')
+// }
+// )
+// unused prototypes
 
 // console.dir(displayArticle)
 
